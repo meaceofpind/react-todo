@@ -1,0 +1,99 @@
+ body,html,#root {
+    text-align: center;
+    height:600px;
+    background-color: #0D0D0D;
+  }
+
+.Card{
+    background-color: #BCEE4B;   
+    width:30%;
+    height:60%;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: left;
+    border-radius: 50px;
+}
+
+
+.Card.done{
+    background-color: #1a2227;
+    color:white;
+}
+
+.Card>*{
+    padding-left:10%;
+    margin-top:10%;
+}
+.buttons{
+    top:83%;
+    position:absolute;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
+    border-radius: 50%;
+}
+
+.buttons>button{    
+    border-radius: 50%;
+    height:160px;
+    width:160px;
+    margin: 0 10px;
+    border-width: 0;
+}
+
+.Delete-btn{
+    background-color: white;
+    
+}
+
+.Done-btn{
+    background-color: #EC6828;
+}
+
+.buttons>button>span{
+    font-size: 40px;
+    font-weight:100;
+}
+
+.buttons>.Delete-btn>span{
+    font-size: 60px;
+    font-weight:100;
+}
+
+.done>.Done-btn{
+    background-color: #BCEE4B;
+}
+
+.isDone>.Done-btn{
+    animation: 0.6s ease-out 0s 1 rippleColour;
+    animation-fill-mode: forwards;
+}
+@keyframes rippleColour {
+    from {
+        background-color: #EC6828;
+    }
+
+    to {
+        background-color: #BCEE4B;
+    }
+}
+
+.isDone.Card{
+    animation: 0.6s ease-out 0s 1 ripple;
+    animation-fill-mode: forwards;
+}
+@keyframes ripple {
+    from {
+        background-color: #BCEE4B;
+    }
+
+    to {
+        background-color: #1a2227;
+        color:white;
+    }
+}
+
+
